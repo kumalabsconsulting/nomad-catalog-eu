@@ -1,0 +1,54 @@
+{
+  "spec_version": "2026-08-02",
+  "language": "fr",
+  "options": [
+    {
+      "id": "none",
+      "name": "Pas de Wikipédia",
+      "description": "Ignorer l'installation de Wikipédia",
+      "size_mb": 0,
+      "url": null,
+      "version": null
+    },
+    {
+      "id": "top-mini",
+      "name": "Référence rapide",
+      "description": "Les 246 000 articles les plus consultés, images réduites.",
+      "size_mb": 136,
+      "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_top_mini_2026-07.zim",
+      "version": "2026-07"
+    },
+    {
+      "id": "top-maxi",
+      "name": "Articles populaires",
+      "description": "Les 246 000 articles les plus consultés, avec images.",
+      "size_mb": 6091,
+      "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_top_maxi_2026-07.zim",
+      "version": "2026-07"
+    },
+    {
+      "id": "all-mini",
+      "name": "Wikipédia complète (compacte)",
+      "description": "Les 4,5 millions d'articles en format condensé.",
+      "size_mb": 3418,
+      "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_all_mini_2026-05.zim",
+      "version": "2026-05"
+    },
+    {
+      "id": "all-nopic",
+      "name": "Wikipédia complète (sans images)",
+      "description": "Tous les articles, sans illustrations.",
+      "size_mb": 12315,
+      "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_all_nopic_2026-05.zim",
+      "version": "2026-05"
+    },
+    {
+      "id": "all-maxi",
+      "name": "Wikipédia complète (intégrale)",
+      "description": "Tous les articles avec images et médias.",
+      "size_mb": 52871,
+      "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_all_maxi_2026-05.zim",
+      "version": "2026-05"
+    }
+  ]
+}

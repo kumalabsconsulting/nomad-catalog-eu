@@ -1,0 +1,556 @@
+{
+  "spec_version": "2026-03-15",
+  "language": "fr",
+  "categories": [
+    {
+      "name": "Médecine",
+      "slug": "medecine",
+      "icon": "IconStethoscope",
+      "description": "Références médicales francophones : encyclopédie clinique, anatomie, premiers secours.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "medecine-essential",
+          "description": "L'encyclopédie médicale francophone. À prendre en premier.",
+          "resources": [
+            {
+              "id": "wikipedia_fr_medicine_maxi",
+              "version": "2026-07",
+              "title": "Encyclopédie médicale WikiMed",
+              "description": "L'Encyclopédie médicale de Wikipédia",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_medicine_maxi_2026-07.zim",
+              "size_mb": 1243,
+              "article_count": 86805
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "medecine-standard",
+          "description": "Ajoute le corps humain et la médecine expliqués en vidéo.",
+          "resources": [
+            {
+              "id": "cest-pas-sorcier_fr_corps-humain",
+              "version": "2024-11",
+              "title": "Corps humain",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_corps-humain_2024-11.zim",
+              "size_mb": 1193,
+              "article_count": 37
+            },
+            {
+              "id": "cest-pas-sorcier_fr_medecine",
+              "version": "2024-11",
+              "title": "Médecine",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_medecine_2024-11.zim",
+              "size_mb": 1709,
+              "article_count": 62
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "medecine-comprehensive",
+          "description": "Biologie moléculaire et ressources universitaires.",
+          "resources": [
+            {
+              "id": "wikipedia_fr_molcell_maxi",
+              "version": "2026-07",
+              "title": "Biologie moléculaire",
+              "description": "Une sélection d'articles de Wikipédia sur la biologie moléculaire et cellulaire",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_molcell_maxi_2026-07.zim",
+              "size_mb": 168,
+              "article_count": 13107
+            },
+            {
+              "id": "wikiversity_fr_all_maxi",
+              "version": "2026-08",
+              "title": "Wikiversité",
+              "description": "Un projet visant à produire et diffuser des documents pédagogiques.",
+              "url": "https://lb.download.kiwix.org/zim/wikiversity/wikiversity_fr_all_maxi_2026-08.zim",
+              "size_mb": 485,
+              "article_count": 23559
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Autonomie & Survie",
+      "slug": "autonomie",
+      "icon": "IconShieldCheck",
+      "description": "Vivre en autonomie : écologie pratique, énergie, alimentation, savoir-faire manuels.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "autonomie-essential",
+          "description": "Écologie pratique et manuels de savoir-faire.",
+          "resources": [
+            {
+              "id": "ekopedia_fr_all_maxi",
+              "version": "2021-03",
+              "title": "Ekopedia",
+              "description": "Un article de Ékopédia, l'encyclopédie pratique.",
+              "url": "https://lb.download.kiwix.org/zim/other/ekopedia_fr_all_maxi_2021-03.zim",
+              "size_mb": 16,
+              "article_count": 2517
+            },
+            {
+              "id": "wikibooks_fr_all_maxi",
+              "version": "2026-07",
+              "title": "Wikilivres",
+              "description": "La bibliothèque de livres pédagogiques libres",
+              "url": "https://lb.download.kiwix.org/zim/wikibooks/wikibooks_fr_all_maxi_2026-07.zim",
+              "size_mb": 2054,
+              "article_count": 31166
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "autonomie-standard",
+          "description": "Énergie, climat et agronomie.",
+          "resources": [
+            {
+              "id": "cest-pas-sorcier_fr_energie",
+              "version": "2024-11",
+              "title": "Énergie",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_energie_2024-11.zim",
+              "size_mb": 784,
+              "article_count": 42
+            },
+            {
+              "id": "mooc-energie-climat_fr_all",
+              "version": "2026-05",
+              "title": "Le MOOC Energie et Climat",
+              "description": "Donner à tout le monde le moyen de s'emparer de ces enjeux.",
+              "url": "https://lb.download.kiwix.org/zim/videos/mooc-energie-climat_fr_all_2026-05.zim",
+              "size_mb": 265,
+              "article_count": 19
+            },
+            {
+              "id": "wikipedia_fr_climate-change_maxi",
+              "version": "2026-07",
+              "title": "Changement climatique",
+              "description": "Une sélection d'articles de Wikipédia sur le changement climatique",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_climate-change_maxi_2026-07.zim",
+              "size_mb": 75,
+              "article_count": 4133
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "autonomie-comprehensive",
+          "description": "Géographie de terrain et guides de voyage hors ligne.",
+          "resources": [
+            {
+              "id": "wikivoyage_fr_all_maxi",
+              "version": "",
+              "title": "Wikivoyage",
+              "description": "Guide de voyage et de tourisme collaboratif",
+              "url": "https://lb.download.kiwix.org/zim/wikivoyage/wikivoyage_fr_all_maxi_2026-07c.zim",
+              "size_mb": 238,
+              "article_count": 14135
+            },
+            {
+              "id": "wikipedia_fr_geography_maxi",
+              "version": "2026-07",
+              "title": "Géographie par Wikipédia",
+              "description": "Une sélection d'articles de Wikipédia sur la géographie",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_geography_maxi_2026-07.zim",
+              "size_mb": 442,
+              "article_count": 21869
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agriculture & Potager",
+      "slug": "agriculture",
+      "icon": "IconPlant",
+      "description": "Cultiver et se nourrir : botanique, agronomie, cuisine, conservation.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "agriculture-essential",
+          "description": "Botanique et cuisine de base.",
+          "resources": [
+            {
+              "id": "cest-pas-sorcier_fr_botanique",
+              "version": "2024-11",
+              "title": "Botanique",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_botanique_2024-11.zim",
+              "size_mb": 988,
+              "article_count": 24
+            },
+            {
+              "id": "cuisinelibre.org_fr_all",
+              "version": "2026-08",
+              "title": "Cuisine libre",
+              "description": "Une autre cuisine est possible!",
+              "url": "https://lb.download.kiwix.org/zim/other/cuisinelibre.org_fr_all_2026-08.zim",
+              "size_mb": 244,
+              "article_count": 20775
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "agriculture-standard",
+          "description": "Agronomie et alimentation.",
+          "resources": [
+            {
+              "id": "cest-pas-sorcier_fr_agronomie",
+              "version": "2024-11",
+              "title": "Alimentation & Agronomie",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_agronomie_2024-11.zim",
+              "size_mb": 2268,
+              "article_count": 64
+            },
+            {
+              "id": "maitre_lucas_alimentation_fr",
+              "version": "2023-05",
+              "title": "Maître Lucas: l'Alimentation",
+              "description": "Des videos et exercices ludiques afin d’approfondir les leçons du CP au CM2",
+              "url": "https://lb.download.kiwix.org/zim/other/maitre_lucas_alimentation_fr_2023-05.zim",
+              "size_mb": 1398,
+              "article_count": 1
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "agriculture-comprehensive",
+          "description": "Planète, environnement et développement du vivant.",
+          "resources": [
+            {
+              "id": "maitre_lucas_planete_terre_fr",
+              "version": "2023-05",
+              "title": "Planète Terre et Environnement",
+              "description": "Maître Lucas: videos et exercices ludiques afin d’approfondir du CP au CM2",
+              "url": "https://lb.download.kiwix.org/zim/other/maitre_lucas_planete_terre_fr_2023-05.zim",
+              "size_mb": 2419,
+              "article_count": 1
+            },
+            {
+              "id": "maitre_lucas_developpement_fr",
+              "version": "2023-05",
+              "title": "Développement du vivant",
+              "description": "Maître Lucas: videos et exercices ludiques afin d’approfondir du CP au CM2",
+              "url": "https://lb.download.kiwix.org/zim/other/maitre_lucas_developpement_fr_2023-05.zim",
+              "size_mb": 1755,
+              "article_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Réparation & Bricolage",
+      "slug": "reparation",
+      "icon": "IconTool",
+      "description": "Réparer plutôt que remplacer : guides pas à pas, technologie, électronique.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "reparation-essential",
+          "description": "Les guides de réparation iFixit en français.",
+          "resources": [
+            {
+              "id": "ifixit_fr_all",
+              "version": "2026-03",
+              "title": "iFixit en Français",
+              "description": "iFixit est une communauté de personnes réparties dans le monde et qui s'entraid…",
+              "url": "https://lb.download.kiwix.org/zim/ifixit/ifixit_fr_all_2026-03.zim",
+              "size_mb": 3483,
+              "article_count": 105678
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "reparation-standard",
+          "description": "Technologie et industrie expliquées.",
+          "resources": [
+            {
+              "id": "cest-pas-sorcier_fr_technologie",
+              "version": "2024-11",
+              "title": "Technologie & Industrie",
+              "description": "Vidéos de l'émission «C'est pas sorcier»",
+              "url": "https://lb.download.kiwix.org/zim/videos/cest-pas-sorcier_fr_technologie_2024-11.zim",
+              "size_mb": 2911,
+              "article_count": 93
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "reparation-comprehensive",
+          "description": "Électronique et physique appliquée.",
+          "resources": [
+            {
+              "id": "deus-ex-silicium_fr_all",
+              "version": "2026-08",
+              "title": "Deus Ex Silicium",
+              "description": "DEUS EX SILICIUM est une chaine francophone dont la thématique principale est l…",
+              "url": "https://lb.download.kiwix.org/zim/videos/deus-ex-silicium_fr_all_2026-08.zim",
+              "size_mb": 3285,
+              "article_count": 159
+            },
+            {
+              "id": "wikipedia_fr_physics_maxi",
+              "version": "2026-07",
+              "title": "Physique par Wikipédia",
+              "description": "Sélection d'articles de Wikipédia",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_physics_maxi_2026-07.zim",
+              "size_mb": 417,
+              "article_count": 21591
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Référence générale",
+      "slug": "reference",
+      "icon": "IconBook",
+      "description": "Le socle encyclopédique francophone : Wikipédia, dictionnaire, bibliothèque.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "reference-essential",
+          "description": "Le meilleur de Wikipédia et le dictionnaire. Compact.",
+          "resources": [
+            {
+              "id": "wikipedia_fr_top_maxi",
+              "version": "2026-07",
+              "title": "Le meilleur de Wikipédia",
+              "description": "Une sélection des 50 000 meilleurs articles de Wikipédia en français",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_top_maxi_2026-07.zim",
+              "size_mb": 6091,
+              "article_count": 246060
+            },
+            {
+              "id": "wiktionary_fr_all_nopic",
+              "version": "2026-05",
+              "title": "Wiktionnaire",
+              "description": "Le plus grand dictionnaire en français",
+              "url": "https://lb.download.kiwix.org/zim/wiktionary/wiktionary_fr_all_nopic_2026-05.zim",
+              "size_mb": 4702,
+              "article_count": 6958739
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "reference-standard",
+          "description": "Wikipédia complète sans images.",
+          "resources": [
+            {
+              "id": "wikipedia_fr_all_nopic",
+              "version": "2026-05",
+              "title": "Wikipédia",
+              "description": "L'encyclopédie libre",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_all_nopic_2026-05.zim",
+              "size_mb": 12315,
+              "article_count": 4587621
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "reference-comprehensive",
+          "description": "Wikipédia intégrale avec images, et la bibliothèque Wikisource.",
+          "resources": [
+            {
+              "id": "wikipedia_fr_all_maxi",
+              "version": "2026-05",
+              "title": "Wikipédia",
+              "description": "L'encyclopédie libre",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_all_maxi_2026-05.zim",
+              "size_mb": 52871,
+              "article_count": 4587563
+            },
+            {
+              "id": "wikisource_fr_all_nopic",
+              "version": "2025-09",
+              "title": "Wikisource",
+              "description": "An Offline Version of Wikisource in French Language",
+              "url": "https://lb.download.kiwix.org/zim/wikisource/wikisource_fr_all_nopic_2025-09.zim",
+              "size_mb": 11194,
+              "article_count": 4387559
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Éducation",
+      "slug": "education",
+      "icon": "IconSchool",
+      "description": "Apprendre et enseigner hors ligne, du primaire au supérieur.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "education-essential",
+          "description": "L'encyclopédie des enfants et les sciences interactives.",
+          "resources": [
+            {
+              "id": "vikidia_fr_all_maxi",
+              "version": "2026-09",
+              "title": "Vikidia",
+              "description": "L’encyclopédie des 8-13 ans",
+              "url": "https://lb.download.kiwix.org/zim/vikidia/vikidia_fr_all_maxi_2026-09.zim",
+              "size_mb": 1369,
+              "article_count": 87727
+            },
+            {
+              "id": "phet_fr_all",
+              "version": "2026-08",
+              "title": "Simulations interactives PhET",
+              "description": "Simulations interactives pour les sciences et les mathématiques",
+              "url": "https://lb.download.kiwix.org/zim/phet/phet_fr_all_2026-08.zim",
+              "size_mb": 104,
+              "article_count": 120
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "education-standard",
+          "description": "Ressources universitaires et scolaires.",
+          "resources": [
+            {
+              "id": "wikiversity_fr_all_maxi",
+              "version": "2026-08",
+              "title": "Wikiversité",
+              "description": "Un projet visant à produire et diffuser des documents pédagogiques.",
+              "url": "https://lb.download.kiwix.org/zim/wikiversity/wikiversity_fr_all_maxi_2026-08.zim",
+              "size_mb": 485,
+              "article_count": 23559
+            },
+            {
+              "id": "youscribe_fr_college",
+              "version": "2024-05",
+              "title": "Ressources éducatives collège",
+              "description": "Près de 1400 resources pédagogiques pour le collège",
+              "url": "https://lb.download.kiwix.org/zim/other/youscribe_fr_college_2024-05.zim",
+              "size_mb": 805,
+              "article_count": 1
+            },
+            {
+              "id": "youscribe_fr_lycee",
+              "version": "2024-05",
+              "title": "Ressources éducatives lycée",
+              "description": "Plus de 1000 resources pédagogiques pour le lycée",
+              "url": "https://lb.download.kiwix.org/zim/other/youscribe_fr_lycee_2024-05.zim",
+              "size_mb": 713,
+              "article_count": 1
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "education-comprehensive",
+          "description": "Khan Academy en français. Très volumineux.",
+          "resources": [
+            {
+              "id": "khanacademy_fr_all",
+              "version": "2023-03",
+              "title": "Khan Academy (Français)",
+              "description": "Khan Academy propose des vidéos et des exercices sur les maths, la physique, la chimie, la biologie et l'histoire. Chaque sujet est couvert par des explications",
+              "url": "https://lb.download.kiwix.org/zim/other/khanacademy_fr_all_2023-03.zim",
+              "size_mb": 96000,
+              "article_count": 19507
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Informatique",
+      "slug": "informatique",
+      "icon": "IconCode",
+      "description": "Maintenir et réparer ses outils numériques sans internet.",
+      "language": "fr",
+      "tiers": [
+        {
+          "name": "Essentiel",
+          "slug": "informatique-essential",
+          "description": "La documentation Ubuntu francophone.",
+          "resources": [
+            {
+              "id": "doc.ubuntu-fr.org_fr_all",
+              "version": "2026-05",
+              "title": "Documentation ubuntu-fr",
+              "description": "Documentation à-propos d'Ubuntu par les utilisateurs et pour les utilisateurs",
+              "url": "https://lb.download.kiwix.org/zim/other/doc.ubuntu-fr.org_fr_all_2026-05.zim",
+              "size_mb": 1281,
+              "article_count": 22049
+            }
+          ],
+          "recommended": true
+        },
+        {
+          "name": "Standard",
+          "slug": "informatique-standard",
+          "description": "Programmation et informatique générale.",
+          "resources": [
+            {
+              "id": "unine.ch_fr_premiers-pas-avec-python",
+              "version": "2026-07",
+              "title": "Premiers pas avec Python",
+              "description": "Des capsules vidéos à utiliser pour faire ses premiers pas en python",
+              "url": "https://lb.download.kiwix.org/zim/videos/unine.ch_fr_premiers-pas-avec-python_2026-07.zim",
+              "size_mb": 22,
+              "article_count": 8
+            },
+            {
+              "id": "wikipedia_fr_computer_maxi",
+              "version": "2026-07",
+              "title": "Informatique par Wikipédia",
+              "description": "Une sélection d'articles de Wikipédia sur l'informatique",
+              "url": "https://lb.download.kiwix.org/zim/wikipedia/wikipedia_fr_computer_maxi_2026-07.zim",
+              "size_mb": 235,
+              "article_count": 35590
+            }
+          ]
+        },
+        {
+          "name": "Complet",
+          "slug": "informatique-comprehensive",
+          "description": "Initiation à la programmation pour les plus jeunes.",
+          "resources": [
+            {
+              "id": "scratch-wiki_fr_all_maxi",
+              "version": "2021-02",
+              "title": "Scratch Wiki",
+              "description": "Site d'aide concernant Scratch et tout ce qui s'en rapporte",
+              "url": "https://lb.download.kiwix.org/zim/other/scratch-wiki_fr_all_maxi_2021-02.zim",
+              "size_mb": 2,
+              "article_count": 475
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

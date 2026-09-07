@@ -1,0 +1,20 @@
+name: verify catalog links
+
+# Un catalogue aux liens morts se decouvre le jour ou l'on n'a plus internet
+# pour le corriger. On verifie donc en continu, pas seulement a la redaction.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'   # tous les lundis
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: verifier que chaque ressource est joignable
+        run: python3 scripts/verify.py
