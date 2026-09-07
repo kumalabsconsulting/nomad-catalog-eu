@@ -66,7 +66,26 @@ docker restart nomad_kiwix_server
 Le nom de fichier doit respecter le motif `<identifiant>_<AAAA-MM>.zim`, sans
 quoi NOMAD ignore le fichier. Les noms publiés par Kiwix le respectent déjà.
 
-## Reconstruire ou mettre à jour les catalogues
+## Mise à jour automatique
+
+Kiwix republie ses archives chaque mois avec une nouvelle date dans le nom de
+fichier, et **retire régulièrement les anciennes versions de son miroir**. Un
+catalogue figé accumule donc des liens morts sans que personne s'en aperçoive.
+
+Deux workflows GitHub s'en chargent :
+
+| Workflow | Déclenchement | Rôle |
+|---|---|---|
+| `update.yml` | le 3 de chaque mois, ou à la demande | rafraîchit l'index, régénère les catalogues, vérifie, et **ouvre une pull request** si quelque chose a changé |
+| `verify.yml` | chaque lundi, et à chaque commit | vérifie que toutes les URL répondent — c'est l'alarme |
+
+La mise à jour passe **par une pull request et non par un commit direct**. Sur
+un catalogue destiné à une situation où l'on n'a plus internet, une dérive
+silencieuse est inacceptable : quelqu'un doit voir passer « Wikipédia 52 Go →
+54 Go » ou « ressource disparue du miroir ». La PR affiche le détail des
+versions, des tailles et des liens morts éventuels.
+
+## Reconstruire ou mettre à jour à la main
 
 ```bash
 python3 scripts/fetch_kiwix.py fra     # rafraichit l'index depuis Kiwix

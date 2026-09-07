@@ -1,0 +1,112 @@
+name: update catalog from Kiwix
+
+# Kiwix republie ses archives chaque mois avec une nouvelle date dans le nom de
+# fichier, et retire regulierement les anciennes versions du miroir. Un
+# catalogue fige accumule donc des liens morts sans que personne ne s'en
+# apercoive. Ce workflow rafraichit l'index, regenere les catalogues, verifie
+# chaque URL, et ouvre une PULL REQUEST si quelque chose a change.
+#
+# Volontairement une PR et non un commit direct : sur un catalogue destine a
+# une situation ou l'on n'a plus internet, une derive silencieuse est
+# inacceptable. Un humain doit voir passer "Wikipedia 52 Go -> 54 Go" ou
+# "ressource disparue du miroir".
+
+on:
+  schedule:
+    - cron: '0 5 3 * *'      # le 3 de chaque mois, apres les publications Kiwix
+  workflow_dispatch:          # declenchement manuel possible
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: rafraichir l'index depuis le catalogue OPDS de Kiwix
+        run: python3 scripts/fetch_kiwix.py fra
+
+      - name: regenerer les catalogues
+        run: python3 scripts/build_catalog.py | tee /tmp/build.txt
+
+      - name: verifier que chaque ressource est joignable
+        id: verif
+        continue-on-error: true          # on veut la PR meme si un lien est mort
+        run: python3 scripts/verify.py | tee /tmp/verify.txt
+
+      - name: y a-t-il du changement ?
+        id: diff
+        run: |
+          if git diff --quiet -- catalog/ data/; then
+            echo "change=non" >> "$GITHUB_OUTPUT"
+            echo "Aucun changement : catalogue deja a jour."
+          else
+            echo "change=oui" >> "$GITHUB_OUTPUT"
+            git diff --stat -- catalog/ data/
+          fi
+
+      - name: ouvrir une pull request
+        if: steps.diff.outputs.change == 'oui'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCHE="chore/maj-catalogue-$(date +%Y-%m-%d)"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCHE"
+          git add catalog/ data/
+          git commit -m "chore(catalog): mise a jour depuis le catalogue Kiwix
+
+          Regeneration automatique mensuelle. Voir le corps de la PR pour le
+          detail des versions et des tailles."
+
+          git push -q origin "$BRANCHE"
+
+          {
+            echo "Mise à jour automatique depuis le catalogue OPDS de Kiwix."
+            echo
+            if grep -q "INJOIGNABLE" /tmp/verify.txt; then
+              echo "## ⚠️ Ressources injoignables"
+              echo
+              echo "Des ressources référencées ne répondent plus. Kiwix retire les"
+              echo "anciennes versions de son miroir : il faut vérifier que la"
+              echo "sélection pointe bien vers les versions courantes."
+              echo
+              echo '```'
+              grep -A20 "INJOIGNABLE" /tmp/verify.txt | head -25
+              echo '```'
+              echo
+            fi
+            echo "## Contenu du catalogue après mise à jour"
+            echo
+            echo '```'
+            cat /tmp/build.txt
+            echo '```'
+            echo
+            echo "## Différences"
+            echo
+            echo '```'
+            git diff --stat "origin/${GITHUB_REF_NAME}" -- catalog/ | tail -20
+            echo '```'
+            echo
+            echo "Vérification complète dans les logs du job."
+          } > /tmp/pr.md
+
+          gh pr create \
+            --title "chore(catalog): mise à jour mensuelle depuis Kiwix" \
+            --body-file /tmp/pr.md \
+            --base "${GITHUB_REF_NAME}" \
+            --head "$BRANCHE"
+
+      - name: echouer si des liens sont morts
+        if: steps.verif.outcome == 'failure'
+        run: |
+          echo "Des ressources sont injoignables — voir la PR ouverte." >&2
+          exit 1
