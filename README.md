@@ -122,6 +122,23 @@ archives à partir de sources francophones (premiers secours, potager,
 conservation, low-tech, base de données publique des médicaments de l'ANSM),
 avec les outils OpenZIM `zimit` et `zimwriterfs`. C'est la suite prévue.
 
+## Limites et pièges rencontrés
+
+**[docs/limites-et-pieges.md](docs/limites-et-pieges.md)** — retour
+d'expérience sur la fabrication d'archives francophones : ce qui manque, ce qui
+casse, et surtout ce qui casse **sans lever d'erreur**.
+
+Le fil conducteur de ce document : presque aucune de ces pannes ne se signale.
+Elles produisent une archive d'apparence correcte, dont une partie du contenu
+est vide, mal encodée ou inatteignable. Un exemple parmi d'autres : sur la base
+publique des médicaments, **14 % des spécialités** — les insulines, les
+anticoagulants, l'essentiel de l'oncologie — se retrouvaient présentes dans
+l'index et **vides à l'ouverture**, parce que leurs textes sont hébergés
+ailleurs et que la page correspondante utilise un conteneur différent.
+
+Sur un kit destiné à servir quand on n'a plus internet, ce genre de panne se
+découvre au pire moment. D'où cette page.
+
 ## Licence
 
 Les catalogues (fichiers JSON de ce dépôt) sont sous licence **CC0** : ce sont
