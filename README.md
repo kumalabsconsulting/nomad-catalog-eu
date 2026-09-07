@@ -118,9 +118,28 @@ anglophone offre respectivement 14,6 Go et 9,2 Go.
 
 Ce n'est pas un défaut de ce dépôt, c'est un manque en amont : ce contenu
 n'existe pas en français au format ZIM. Le combler suppose de **fabriquer** des
-archives à partir de sources francophones (premiers secours, potager,
-conservation, low-tech, base de données publique des médicaments de l'ANSM),
-avec les outils OpenZIM `zimit` et `zimwriterfs`. C'est la suite prévue.
+archives à partir de sources francophones, avec les outils OpenZIM `zimit` et
+`zimwriterfs`.
+
+## Fabriquer des archives françaises
+
+Un catalogue ne peut référencer que ce qui existe. Là où rien n'existe en
+français, ce dépôt fournit de quoi le fabriquer.
+
+| Générateur | Ce qu'il produit |
+|---|---|
+| **[builders/bdpm](builders/bdpm/)** | les **médicaments français** — ~15 900 spécialités avec notice patient et RCP en texte intégral, index par nom commercial et par substance active |
+
+C'est l'équivalent français de la « Medication Reference » de Project NOMAD,
+qui repose sur les *drug labels* de la FDA — utiles, mais américains : noms
+commerciaux, dosages et présentations diffèrent, et ils ne doivent pas servir à
+établir une posologie en Europe.
+
+Ces générateurs ne redistribuent aucune donnée : ils récupèrent la source à
+jour, ce qui compte pour une référence médicale.
+
+Domaines encore à couvrir : premiers secours, potager, conservation des
+aliments, low-tech et énergie, réparation, eau potable.
 
 ## Limites et pièges rencontrés
 
